@@ -4,25 +4,48 @@ import { Container } from "@mui/system";
 import PlaylistCardItem from "../../playlist-card-item";
 import { Box, Grid, Typography } from "@mui/material";
 
-/**
- * Recents Component
- * Displays a grid of recently visited playlists. If no recent playlists are available,
- * shows a message prompting the user to visit a playlist.
- *
- * @returns {JSX.Element} React Component
- */
 const Recents = () => {
-  // Retrieve playlist data and recent items from the Easy-Peasy store
   const { data } = useStoreState((state) => state.playlists);
   const { items } = useStoreState((state) => state.recents);
 
-  // Map recent items to their corresponding playlist data
   const itemArray = [];
   items.forEach((item) => itemArray.push(data[item]));
 
   return (
-    <div>
-      <Container maxWidth={"lg"} sx={{ paddingTop: 12, minHeight: "100vh" }}>
+    <Box
+      sx={{
+        minHeight: "100vh",
+        position: "relative",
+        backgroundImage: "url(/bg.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(0,0,0,0.9)", // dark overlay
+          zIndex: 1,
+        }}
+      />
+
+      {/* Content */}
+      <Container
+        maxWidth="lg"
+        sx={{
+          pt: 12,
+          pb: 8,
+          minHeight: "100%",
+          position: "relative",
+          zIndex: 2, // above overlay
+        }}
+      >
         {itemArray.length > 0 ? (
           <Grid container alignItems="stretch" spacing={2}>
             {itemArray.map((item) => (
@@ -36,11 +59,11 @@ const Recents = () => {
                 key={item.playlistId}
               >
                 <PlaylistCardItem
-                  key={item.playlistId}
                   playlistId={item.playlistId}
                   playlistThumbnail={item.playlistItems[0]?.thumbnails}
                   playlistTitle={item.playlistTitle}
                   channelTitle={item.channelTitle}
+                  playlistItems={item.playlistItems}
                   path={"recents"}
                 />
               </Grid>
@@ -53,7 +76,7 @@ const Recents = () => {
               flexDirection: "column",
               alignItems: "center",
               justifyContent: "center",
-              minHeight: "50vh",
+              minHeight: "calc(100vh - 96px)",
               textAlign: "center",
               color: "#fff",
             }}
@@ -62,12 +85,12 @@ const Recents = () => {
               📄 Empty Recent Page
             </Typography>
             <Typography variant="body1" sx={{ color: "#B4B2B0" }}>
-              You should visit a palylist at first to see them here!
+              You should visit a playlist first to see them here!
             </Typography>
           </Box>
         )}
       </Container>
-    </div>
+    </Box>
   );
 };
 

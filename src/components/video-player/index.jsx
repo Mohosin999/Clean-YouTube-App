@@ -15,23 +15,16 @@ const VideoPlayer = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Retrieve playlist data from the state using easy-peasy store
   const { data } = useStoreState((state) => state.playlists);
 
-  // Use useLocation hook to get the current URL's location
   const location = useLocation();
-
-  // Extract the videoId from the URL's query parameters
   const videoId = new URLSearchParams(location.search).get("videoId");
 
   // Extract playlistId and index from the URL's path
   const playlistId = location.pathname.split("/")[2];
   const index = location.pathname.split("/")[3];
 
-  // Get the playlist items from the state data
   const playlistItems = data[playlistId].playlistItems;
-
-  // Get the index of the last item in the playlist
   const lastItem = playlistItems.length - 1;
 
   // Logic for previous button: calculate the previous video's index

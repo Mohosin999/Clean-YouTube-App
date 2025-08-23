@@ -58,7 +58,7 @@ const PlayerPage = () => {
       >
         {/* Search Bar */}
         <TextField
-          placeholder="Search Playlists"
+          placeholder="Search targeted videos"
           variant="outlined"
           size="small"
           value={searchQuery}
@@ -67,10 +67,10 @@ const PlayerPage = () => {
             marginBottom: 3,
             width: "100%",
             backgroundColor: "#333", // Darker background
-            borderRadius: "4px",
+            borderRadius: "12px",
             "& .MuiOutlinedInput-root": {
               color: "#fff", // Text color for dark mode
-              borderRadius: "4px",
+              borderRadius: "12px",
               "& fieldset": {
                 borderColor: "#555", // Border color
               },

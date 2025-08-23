@@ -25,6 +25,7 @@ const PlaylistCardItem = ({
   playlistTitle,
   channelTitle,
   playlistId,
+  playlistItems,
   path,
   onCardClick, // Add onClick prop
 }) => {
@@ -51,7 +52,7 @@ const PlaylistCardItem = ({
       <CardMedia
         to={`/player/${playlistId}`}
         component={Link}
-        image={playlistThumbnail.url}
+        image={playlistThumbnail?.url}
         alt={playlistTitle}
         onClick={() => {
           addToRecent(playlistId);
@@ -82,7 +83,7 @@ const PlaylistCardItem = ({
           color="text.secondary"
           sx={{ color: "#B4B2B0" }}
         >
-          {channelTitle}
+          {channelTitle} - {playlistItems?.length} videos
         </Typography>
 
         <div style={{ display: "flex", marginTop: "0.4rem" }}>
@@ -94,7 +95,7 @@ const PlaylistCardItem = ({
               if (onCardClick) onCardClick(); // Trigger loader on click
             }}
             sx={{
-              padding: "6px 0",
+              padding: "6px 12px",
               "&:hover": {
                 backgroundColor: "transparent",
                 color: "inherit",

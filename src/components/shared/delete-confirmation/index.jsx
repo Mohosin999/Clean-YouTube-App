@@ -55,7 +55,7 @@ const DeleteWithConfirm = ({ title, confirmTitle, message, onConfirm }) => {
       <Delete
         titleAccess={title}
         onClick={handleClickOpen}
-        sx={{ cursor: "pointer", color: "#fff", marginLeft: "0.8rem" }}
+        sx={{ cursor: "pointer", color: "#ff0000", marginLeft: "0.8rem" }}
       />
       {/* Confirmation Dialog */}
       <Dialog

@@ -34,6 +34,7 @@ const CustomButton = ({
       component={component}
       sx={{
         color: "#efefef",
+        backgroundColor: "#022c43",
         marginLeft: marginLeft ? marginLeft : "1rem",
         marginBottom: isSmallScreen ? "0.5rem" : "0rem",
       }}

@@ -37,7 +37,7 @@ const VideoCardItem = ({ title, thumbnails, videoId, videos, playlistId }) => {
         >
           <CardMedia
             component="img"
-            image={thumbnails.url}
+            image={thumbnails?.url}
             alt={title}
             sx={{
               height: "180",

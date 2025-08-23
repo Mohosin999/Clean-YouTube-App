@@ -9,6 +9,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import useSnackbar from "../../hooks/useSnackbar";
+import SearchPlaylist from "../shared/search-playlist";
 
 /**
  * PlaylistForm component for adding a playlist by URL or ID.
@@ -40,10 +41,6 @@ const PlaylistForm = ({ open, handleClose }) => {
       return;
     }
 
-    /**
-     * This is extracting the playlist ID from a given YouTube playlist URL
-     * - /(?:list=)([\w-]+)/)?.[1]
-     */
     const playlistId = state.match(/(?:list=)([\w-]+)/)?.[1] || state;
 
     if (data[playlistId]) {
@@ -54,15 +51,20 @@ const PlaylistForm = ({ open, handleClose }) => {
     try {
       setIsError(false);
 
-      // Attempt to fetch the playlist
-      await getPlaylist(playlistId);
+      const result = await getPlaylist(playlistId);
 
-      // Success handling
+      if (!result) {
+        handleSnackbar(
+          "Failed to add playlist. Please check the ID or link.",
+          "error"
+        );
+        return;
+      }
+
       handleSnackbar("Playlist Added Successfully", "success");
       setState("");
       handleClose();
     } catch (error) {
-      // Error handling
       console.error("Error fetching playlist:", error);
       handleSnackbar(
         "Failed to add playlist. Please check the ID or link.",
@@ -79,9 +81,16 @@ const PlaylistForm = ({ open, handleClose }) => {
         sx={{
           "& .MuiPaper-root": {
             backgroundColor: "#292929",
+            marginLeft: { xs: 2, sm: 2, md: "auto" },
+            marginRight: { xs: 2, sm: 2, md: "auto" },
           },
         }}
       >
+        {/* Pass onApply here */}
+        <DialogContent>
+          <SearchPlaylist onApply={(link) => setState(link)} />
+        </DialogContent>
+
         <DialogTitle
           sx={{
             color: "#fff",
@@ -106,17 +115,15 @@ const PlaylistForm = ({ open, handleClose }) => {
             onChange={(e) => setState(e.target.value)}
             value={state}
             InputLabelProps={{
-              style: { color: "#B4B2B0" }, // Gold label color
+              style: { color: "#B4B2B0" },
             }}
             sx={{
-              backgroundColor: "#424242", // Slightly lighter gray background
-              borderRadius: "4px",
-              input: { color: "#FFFFFF" }, // Text color in the input field
+              backgroundColor: "#424242",
+              input: { color: "#FFFFFF" },
             }}
           />
         </DialogContent>
         <DialogActions>
-          {/* <Button variant="outlined" onClick={handleClose}> */}
           <Button
             onClick={() => {
               handleClose();
