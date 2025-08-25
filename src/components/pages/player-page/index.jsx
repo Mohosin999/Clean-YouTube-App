@@ -45,6 +45,7 @@ const PlayerPage = () => {
     playlistItem.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  console.log("night owl", filteredPlaylistItem);
   // Handle search input changes
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -95,7 +96,7 @@ const PlayerPage = () => {
 
         {filteredPlaylistItem.length > 0 ? (
           <Grid container alignItems="stretch" spacing={2}>
-            {filteredPlaylistItem.map((item, index) => (
+            {filteredPlaylistItem.map((item) => (
               <Grid
                 item
                 xs={12}

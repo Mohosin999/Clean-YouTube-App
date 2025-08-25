@@ -109,7 +109,7 @@ const Footer = () => {
           color: "#f5e1da",
         }}
       >
-        © 2023 Clean YouTube. All Rights Reserved.
+        © 2023-2025 Clean YouTube. All Rights Reserved.
       </Typography>
     </Box>
   );

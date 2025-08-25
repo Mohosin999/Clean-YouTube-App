@@ -128,6 +128,7 @@ PlaylistCardItem.propTypes = {
   playlistTitle: PropTypes.string.isRequired,
   channelTitle: PropTypes.string.isRequired,
   playlistId: PropTypes.string.isRequired,
+  playlistItems: PropTypes.array.isRequired,
   path: PropTypes.string.isRequired,
   onCardClick: PropTypes.func,
 };
