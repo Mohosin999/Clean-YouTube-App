@@ -3,48 +3,44 @@
 ## 📚 Table of Contents
 
 - [Description](#-description)
-- [Technologies & Tools Used](#-technologies--tools-used)
+- [Tech Stack](#-tech-stack)
 - [Features](#-features)
 - [Benefits](#-benefits)
 - [Setup and Installation](#-setup-and-installation)
+
+![Clean YouTube App](./public/clean-youtube.png)
 
 ## 📖 Description
 
 Clean YouTube is a user-friendly web application designed to enhance your video-watching experience on YouTube. By providing a clean and distraction-free interface, it ensures that users can focus solely on their selected videos without interruptions from ads or cluttered layouts. Users can manage playlists, keep track of recently visited playlists, and save their favorites, all while enjoying a seamless and enjoyable experience.
 
-## 💻 Technologies & Tools Used
+## 💻 Tech Stack
 
-- React.js
-- React Router DOM
-- React Youtube
-- YouTube Data API (Used to fetch and manage YouTube playlists and videos)
-- Material UI
-- EasyPeasy (For state management)
-- Axios
-- PropTypes
+- React.js, React Router DOM, React YouTube, YouTube Data API, Material UI, EasyPeasy, Axios, PropTypes
 
-## 🔆 Features
+## 🛠 Features
 
-**`Add Playlists by ID or URL:`**
+#### `Add Playlists by ID, URL, or Search`
 
-- Users can quickly add a playlist by pasting its YouTube URL or Playlist ID, ensuring convenience and speed.
+- Users can quickly add a playlist by pasting its YouTube URL or Playlist ID.
+- Users can also search directly within the app to find and add their own playlists.
 
-**`View All Playlist Videos:`**
+#### `Favorites Management`
 
-- Browse all videos from the added playlist in a clean, ad-free interface.
+- Add frequently watched playlists to a favorites section for quick access.
+- Remove playlists from favorites as needed.
 
-**`Favorites Management:`**
+#### `Recent Playlist Tracking`
 
-- User can add their most-loved playlists in favorites.
-- Also, they can remove it from favorites.
+- Automatically tracks and displays recently accessed playlists and videos for easy revisiting.
 
-**`Recent Playlist Tracking:`**
+#### `Permanent Playlist Deletion`
 
-- The project keeps track of users' recent activities, displaying a history of playlists and videos accessed. This feature ensures that users can easily revisit content they've interacted with recently.
+- Remove unwanted playlists permanently to keep your library organized and clutter-free.
 
-**`Permanent Playlist Deletion:`**
+#### `Live Video Search`
 
-- Remove unwanted playlists permanently.
+- Users can search in real-time within a playlist to quickly find a specific video
 
 ## 💬 Benefits
 
@@ -57,46 +53,10 @@ Clean YouTube is a user-friendly web application designed to enhance your video-
 
 Follow these steps to set up the Clean YouTube Application on your local machine:
 
-### 1. `Clone the Repository:`
+#### `Clone the Repository:`
 
 ```
 https://github.com/Mohosin999/Clean-YouTube-Application.git
 ```
 
-### 2. `Navigate to the Project Directory:`
-
-Go to the project directory that you've just cloned.
-
-```
-cd Clean-YouTube-Application
-```
-
-### 3. `Create .env File:`
-
-Create a **.env** file in the root directory and add the following key -
-
-```
-VITE_YOUTUBE_API_KEY=<your API key from Google Developer Console>
-```
-
-### 4. `Install Dependencies:`
-
-Install all the dependencies by typing the following in your terminal.
-
-```
-yarn install
-```
-
-### 5. `Start the Server:`
-
-```
-yarn dev
-```
-
-### 6. `Access the Application:`
-
-Open your browser and visit.
-
-```
-http://localhost:5173/
-```
+#### The End
