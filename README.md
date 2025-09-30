@@ -6,8 +6,8 @@
 - [Live Demo](#-live-demo)
 - [Features](#-features)
 - [Benefits](#-benefits)
-- [Tech Stack](#-tech-stack)
-- [Setup and Installation](#-setup-and-installation)
+- [Tech Stack](#️-tech-stack)
+- [Setup and Installation](#️-setup-and-installation)
 - [Environment Variables](#-environment-variables)
 - [Author Info](#-author-info)
 
