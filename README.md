@@ -1,26 +1,25 @@
 # Clean Youtube Project
 
-Live Link: https://clean-youtube-application.onrender.com/
-
 ## 📚 Table of Contents
 
 - [Description](#-description)
-- [Tech Stack](#-tech-stack)
+- [Live Demo](#-live-demo)
 - [Features](#-features)
 - [Benefits](#-benefits)
+- [Tech Stack](#-tech-stack)
 - [Setup and Installation](#-setup-and-installation)
+- [Environment Variables](#-environment-variables)
+- [Author Info](#-author-info)
 
-![Clean YouTube App](./public/clean-youtube.png)
-
-## 📖 Description
+## 📝 Description
 
 Clean YouTube is a user-friendly web application designed to enhance your video-watching experience on YouTube. By providing a clean and distraction-free interface, it ensures that users can focus solely on their selected videos without interruptions from ads or cluttered layouts. Users can manage playlists, keep track of recently visited playlists, and save their favorites, all while enjoying a seamless and enjoyable experience.
 
-## 💻 Tech Stack
+## 🚀 Live Demo
 
-- React.js, React Router DOM, React YouTube, YouTube Data API, Material UI, EasyPeasy, Axios, PropTypes
+[![Project Screenshot](./public/clean-youtube.png)](https://clean-youtube-application.onrender.com/)
 
-## 🛠 Features
+## ✨ Features
 
 #### `Add Playlists by ID, URL, or Search`
 
@@ -51,14 +50,36 @@ Clean YouTube is a user-friendly web application designed to enhance your video-
 - Efficient playlist management with favorites and recent tracking.
 - Simple yet powerful controls for adding, managing, and removing playlists.
 
-## 🚀 Setup and Installation
+## 🛠️ Tech Stack
 
-Follow these steps to set up the Clean YouTube Application on your local machine:
+- React.js, React Router DOM, React YouTube, YouTube Data API, Material UI, EasyPeasy, Axios, PropTypes
 
-#### `Clone the Repository:`
+## ⚙️ Setup and Installation
+
+### Step-by-step instructions for cloning and running locally:
 
 ```
-https://github.com/Mohosin999/Clean-YouTube-Application.git
+✅ git clone https://github.com/Mohosin999/Clean-YouTube-App.git
+
+✅ cd Clean-YouTube-App
+
+✅ yarn install
+
+✅ yarn dev
 ```
 
-#### The End
+## 🔑 Environment Variables
+
+Create a `.env` file in the root directory of the project and add the following variable:
+
+```
+VITE_YOUTUBE_API_KEY=
+```
+
+## 📬 Author Info
+
+👤 **Mohosin Hasan Akash**
+
+- 💼 **LinkedIn:** [linkedin.com/in/mohosinh99/](https://www.linkedin.com/in/mohosinh99/)
+- 🌐 **Portfolio:** [personal-portfolio.com](https://personal-portfolio-website-brown-nine.vercel.app/)
+- 📧 **Email:** mohosin.hasan.akash@gmail.com

@@ -26,27 +26,6 @@ const Footer = () => {
         gap: 1,
       }}
     >
-      {/* Heading Section */}
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          textAlign: "center",
-        }}
-      >
-        <Typography
-          variant="h6"
-          sx={{
-            fontSize: isMediumScreen ? "1.2rem" : "1.5rem",
-            color: "#f1f1f1",
-            fontWeight: "semibold",
-          }}
-        >
-          Enjoy Clean YouTube
-        </Typography>
-      </Box>
-
       {/* Social Media Section */}
       <Box
         sx={{
