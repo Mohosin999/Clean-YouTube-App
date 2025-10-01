@@ -52,7 +52,14 @@ Clean YouTube is a user-friendly web application designed to enhance your video-
 
 ## 🛠️ Tech Stack
 
-- React.js, React Router DOM, React YouTube, YouTube Data API, Material UI, EasyPeasy, Axios, PropTypes
+- React 18
+- React Router DOM
+- React YouTube
+- YouTube Data API
+- Material UI
+- EasyPeasy
+- Axios
+- PropTypes
 
 ## ⚙️ Setup and Installation
 
@@ -66,6 +73,12 @@ Clean YouTube is a user-friendly web application designed to enhance your video-
 ✅ yarn install
 
 ✅ yarn dev
+```
+
+**Access app at:**
+
+```
+http://localhost:5173
 ```
 
 ## 🔑 Environment Variables
