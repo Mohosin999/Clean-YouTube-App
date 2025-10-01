@@ -53,6 +53,7 @@ Clean YouTube is a user-friendly web application designed to enhance your video-
 ## 🛠️ Tech Stack
 
 - React 18
+- JavaScript
 - React Router DOM
 - React YouTube
 - YouTube Data API
